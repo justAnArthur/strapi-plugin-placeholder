@@ -1,8 +1,8 @@
-'use strict';
+'use strict'
 
-const schema = require('./schema');
+const schema = require('./schema')
 
 module.exports = {
   default: () => ({}),
-  validator: async (config) => schema.validate(config),
-};
+  validator: async (config) => schema.validate(config)
+}

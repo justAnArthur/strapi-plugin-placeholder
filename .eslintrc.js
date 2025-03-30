@@ -1,13 +1,13 @@
-'use strict';
+'use strict'
 
 module.exports = {
   extends: ['eslint:recommended', 'prettier', 'plugin:node/recommended'],
   env: {
     es6: true,
-    node: true,
+    node: true
   },
   globals: {
-    strapi: 'readonly',
+    strapi: 'readonly'
   },
   rules: {
     strict: ['error', 'global'],
@@ -21,6 +21,6 @@ module.exports = {
     'node/no-path-concat': 'error',
     'node/no-callback-literal': 'error',
     'node/handle-callback-err': 'error',
-    'one-var': ['error', 'never'],
-  },
-};
+    'one-var': ['error', 'never']
+  }
+}

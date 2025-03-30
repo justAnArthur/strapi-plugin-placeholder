@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-const pluginId = require('../plugin-id');
+const pluginId = require('../plugin-id')
 
 module.exports = ({ strapi }) => ({
   /**
@@ -17,5 +17,5 @@ module.exports = ({ strapi }) => ({
    * @returns {Object} the new settings for the plugin
    */
 
-  set: (settings) => strapi.config.set(`plugin.${pluginId}`, settings),
-});
+  set: (settings) => strapi.config.set(`plugin.${pluginId}`, settings)
+})

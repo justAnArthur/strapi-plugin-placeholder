@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const { getPlaiceholder } = require('plaiceholder');
-const { getService } = require('../utils');
+const { getPlaiceholder } = require('plaiceholder')
+const { getService } = require('../utils')
 
 module.exports = ({ strapi }) => ({
   /**
@@ -12,12 +12,12 @@ module.exports = ({ strapi }) => ({
 
   async generate(url) {
     try {
-      const settings = getService(strapi, 'settings').get();
-      const { base64 } = await getPlaiceholder(url, settings);
-      return base64;
+      const settings = getService(strapi, 'settings').get()
+      const { base64 } = await getPlaiceholder(url, settings)
+      return base64
     } catch (e) {
-      strapi.log.error(e);
-      return null;
+      strapi.log.error(e)
+      return null
     }
-  },
-});
+  }
+})

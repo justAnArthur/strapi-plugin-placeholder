@@ -3,7 +3,9 @@
 Generate base64 placeholders for [Strapi](https://strapi.io/) images.
 
 ## 🖌️ Supported Content
+
 The Placeholder plugin currently supports the following formats:
+
 - JPEG
 - PNG
 - GIF
@@ -86,7 +88,8 @@ async function up(trx) {
   }
 }
 
-async function down() {}
+async function down() {
+}
 
 module.exports = { up, down };
 ```
