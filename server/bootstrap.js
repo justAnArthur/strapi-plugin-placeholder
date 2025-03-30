@@ -18,9 +18,13 @@ module.exports = ({ strapi }) => {
 
     if (!canGeneratePlaceholder(data)) return
 
-    const placeholder = await getService(strapi, 'placeholder').generate(data.url)
+    try {
+      const placeholder = await getService(strapi, 'placeholder').generate(data.url)
 
-    data.provider_metadata = { placeholder }
+      data.provider_metadata = { placeholder }
+    } catch (e) {
+      strapi.log.error(e)
+    }
   }
 
   strapi.db.lifecycles.subscribe({
